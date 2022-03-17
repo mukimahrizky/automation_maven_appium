@@ -7,7 +7,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class base {
-    public static void main(String[] args) throws MalformedURLException {
+    public static AndroidDriver capabilities() throws MalformedURLException {
         File appDir = new File("src");
         File app = new File(appDir, "ApiDemos-debug.apk");
 
@@ -18,5 +18,7 @@ public class base {
         cap.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
 
         AndroidDriver driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), cap);
+
+        return driver;
     }
 }
